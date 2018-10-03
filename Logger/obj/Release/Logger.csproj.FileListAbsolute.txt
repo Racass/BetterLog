@@ -1,0 +1,8 @@
+C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Logger\Logger\bin\Release\Logger.exe
+C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Logger\Logger\bin\Release\Logger.pdb
+C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Logger\Logger\obj\Release\Logger.csprojResolveAssemblyReference.cache
+C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Logger\Logger\obj\Release\Logger.Front.ShowLogTable.resources
+C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Logger\Logger\obj\Release\Logger.Properties.Resources.resources
+C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Logger\Logger\obj\Release\Logger.csproj.GenerateResource.Cache
+C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Logger\Logger\obj\Release\Logger.exe
+C:\Users\rafael.cassiolato\Documents\Visual Studio 2013\Projects\Logger\Logger\obj\Release\Logger.pdb
