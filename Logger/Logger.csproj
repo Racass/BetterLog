@@ -50,7 +50,8 @@
     <Compile Include="Front\ShowLogTable.Designer.cs">
       <DependentUpon>ShowLogTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Logs\CsvCtrl.cs" />
+    <Compile Include="Logs\CSV\CsvCtrl.cs" />
+    <Compile Include="Logs\CSV\CSVMessage.cs" />
     <Compile Include="MyObject\MyDataTable_CSV.cs" />
     <Compile Include="MyObject\MyDataTable_Ctrl.cs" />
     <Compile Include="MyObject\Others\ListFather.cs" />
