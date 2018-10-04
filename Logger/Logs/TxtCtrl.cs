@@ -16,6 +16,7 @@ namespace Logger.Logs
         string path;
         internal TxtCtrl()
         {
+            this.myType = 1;
             path = Directory.GetCurrentDirectory() + "\\log\\txt\\" + DateTime.Now.ToShortDateString().Replace("/", ".").Replace("\\", ".") + ".txt";
             InternUtils.verifyDirectory();
             txt_Table = new MyDataTable_TXT(path);

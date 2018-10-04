@@ -1,8 +1,10 @@
-﻿using System;
-using System.Threading;
+﻿using Logger.Front;
 using Logger.Logs;
+using Logger.Logs.CSV;
+using System;
+using System.Threading;
 using System.Windows.Forms;
-using Logger.Front;
+using System.Collections.Generic;
 
 namespace Logger
 {
@@ -10,6 +12,8 @@ namespace Logger
     {
         internal ObjLog log;
         private int p_type;
+        private bool myColumns = false;
+        private List<string> cols;
         /// <summary>
         /// Set the instance of the log
         /// </summary>
@@ -22,6 +26,20 @@ namespace Logger
             if (log == null)
                 throw new Exception("Objeto não implementando. Favor obedecer regra 1~5. Error code: -1");
         }
+        /// <summary>
+        /// Generates the columns names for CSV file
+        /// </summary>
+        /// <param name="Collumns">List of names</param>
+        public void SetColumns(List<string> Collumns)
+        {
+            if (Collumns.Count > 0)
+            {
+                cols = Collumns;
+                myColumns = true;
+            }
+            else
+                throw new Exception("Colunas inválidas");
+        }
         private ObjLog setType(int type)
         {
             ObjLog myLog;
@@ -31,9 +49,13 @@ namespace Logger
                     myLog = new TxtCtrl();
                     return myLog;
                 case 2:
-                    myLog = null;
-                    throw new Exception("Not implemented");
-                    //return myLog;
+                    if (myColumns)
+                    {
+                        myLog = new CsvCtrl(cols);
+                        return myLog;
+                    }
+                    else
+                        throw new Exception("Colunas não foram setadas. Favor chamar Controller.SetColumns");
                 case 3:
                     myLog = null;
                     throw new Exception("Not implemented");
@@ -59,7 +81,26 @@ namespace Logger
         /// <param name="Msg">The message to be written</param>
         public void WriteLog(string Msg)
         {
-            log.WriteLog(Msg);
+            if (log.myType == 1)
+                log.WriteLog(Msg);
+            else
+                throw new Exception("Use o método correto para o seu tipo de log. Tipo atual: " + log.myType.ToString());
+        }
+        /// <summary>
+        /// Write to CSVLog
+        /// </summary>
+        /// <param name="message">the Object CSVMessage containing the column and the message</param>
+        public void WriteLog(CSVMessage message)
+        {
+
+        }
+        /// <summary>
+        /// Gets a object CsvCtrl for WriteLog
+        /// </summary>
+        /// <returns></returns>
+        public CSVMessage Get_CSVMessage()
+        {
+            return new CSVMessage(this);
         }
         /// <summary>
         /// Open a windows form with a grid containing the application log
