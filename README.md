@@ -20,4 +20,4 @@ The BetterLog will save the message in a queue and save it on the respective typ
  * Others
    * Create a documentation
    * Levels of debug
-     * Based on the debug level, will save something or not.
+    * Based on the debug level, will save the message or not.
