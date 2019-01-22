@@ -7,9 +7,13 @@ The BetterLog will save the message in a queue and save it on the respective typ
 
 # TODO
 
- * ~Implements TXT~
- * Implements CSV
- * Implements MSSQL
- * Implements MySQL
- * Implements a SAP Business One form to see the log
- * Implements a windows forms screen to visualize the log
+ * logs types
+  * ~Implements TXT~
+  * Implements CSV
+  * Implements MSSQL
+  * Implements MySQL
+  * Implements Hana 
+  * Implements SAP Business One UDT
+ * Visualization
+  * Implements a SAP Business One form to see the log    
+  * Implements a windows forms screen to visualize the log
